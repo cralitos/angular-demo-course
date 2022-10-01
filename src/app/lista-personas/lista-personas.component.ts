@@ -9,12 +9,17 @@ import { timeout } from 'rxjs';
 export class ListaPersonasComponent implements OnInit {
 
   agregarPersona=false;
+  status="no se ha agregado persona"
   constructor() {
     setTimeout(
       ()=>{this.agregarPersona=true}
       ,
       5000
     )
+   }
+
+   onAgregarPersona(){
+    this.status="persona agregada"
    }
 
   ngOnInit(): void {

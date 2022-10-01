@@ -1,3 +1,6 @@
 <h1>lista-personas</h1>
-<button type="button" class="btn btn-primary" [disabled]="!agregarPersona">Agregar persona</button>
+<button type="button" class="btn btn-primary"
+[disabled]="!agregarPersona"
+(click)="onAgregarPersona()">Agregar persona</button>
+<p>{{status}}</p>
 <app-persona></app-persona>
