@@ -11,6 +11,7 @@ export class ListaPersonasComponent implements OnInit {
   agregarPersona=false;
   status="no se ha agregado persona"
   tituloPersona = "";
+  personaAgregada = false;
   constructor() {
     setTimeout(
       ()=>{this.agregarPersona=true}
@@ -20,6 +21,7 @@ export class ListaPersonasComponent implements OnInit {
    }
 
    onAgregarPersona(){
+    this.personaAgregada=true;
     this.status="persona agregada"
    }
 

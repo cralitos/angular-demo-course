@@ -6,5 +6,5 @@ type="text"
 <button type="button" class="btn btn-primary"
 [disabled]="!agregarPersona"
 (click)="onAgregarPersona()">Agregar persona</button>
-<p>{{status}}</p>
+<p *ngIf="personaAgregada">{{status}} con titulo de {{tituloPersona}}</p>
 <app-persona></app-persona>
