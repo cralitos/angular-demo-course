@@ -10,6 +10,7 @@ export class ListaPersonasComponent implements OnInit {
 
   agregarPersona=false;
   status="no se ha agregado persona"
+  tituloPersona = "";
   constructor() {
     setTimeout(
       ()=>{this.agregarPersona=true}
@@ -20,6 +21,10 @@ export class ListaPersonasComponent implements OnInit {
 
    onAgregarPersona(){
     this.status="persona agregada"
+   }
+
+   onModificarPersona(event: Event){
+    this.tituloPersona = (<HTMLInputElement>event.target).value;
    }
 
   ngOnInit(): void {
