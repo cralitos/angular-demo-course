@@ -14,7 +14,7 @@ type="text"
 <app-persona></app-persona>
 <div>
   <h2>Listado Personas</h2>
-  <div *ngFor="let persona of personas">
-    <p>nombre: {{persona.nombre}}  {{persona.apellido}}</p>
-  </div>
+  <ul *ngFor="let persona of personas">
+    <li>nombre: {{persona.nombre}}  {{persona.apellido}}</li>
+  </ul>
 </div>
