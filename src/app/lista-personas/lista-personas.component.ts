@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaPersonasComponent implements OnInit {
 
+  agregarPersona=false;
   constructor() { }
 
   ngOnInit(): void {
