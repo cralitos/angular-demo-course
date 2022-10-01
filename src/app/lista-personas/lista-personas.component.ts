@@ -1,3 +1,4 @@
+import { Persona } from './../models/persona.model';
 import { Component, OnInit } from '@angular/core';
 import { timeout } from 'rxjs';
 
@@ -12,6 +13,11 @@ export class ListaPersonasComponent implements OnInit {
   status="no se ha agregado persona"
   tituloPersona = "";
   personaAgregada = false;
+
+  personas: Persona[]=[
+    new Persona("juan","Perez"),
+    new Persona("pedro","godinez")
+  ]
   constructor() {
     setTimeout(
       ()=>{this.agregarPersona=true}
