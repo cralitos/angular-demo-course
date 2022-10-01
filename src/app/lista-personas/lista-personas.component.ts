@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-lista-personas',
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class ListaPersonasComponent implements OnInit {
 
   agregarPersona=false;
-  constructor() { }
+  constructor() {
+    setTimeout(
+      ()=>{this.agregarPersona=true}
+      ,
+      5000
+    )
+   }
 
   ngOnInit(): void {
+
   }
 
 }
